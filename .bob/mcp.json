@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "buildpulse": {
+      "type": "streamable-http",
+      "url": "http://localhost:8080/build-pulse/mcp",
+      "alwaysAllow": [
+        "get_build_failure_context",
+        "verify_repair_patch"
+      ],
+      "disabled": false
+    }
+  }
+}
