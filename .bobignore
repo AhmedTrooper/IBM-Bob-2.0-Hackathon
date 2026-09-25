@@ -1,0 +1,27 @@
+# Security & Secret Isolation
+.env
+.env.*
+!**/.env.example
+*.pem
+*.key
+credentials.json
+*.db
+*.sqlite
+
+# Rust Build Artifacts
+target/
+**/debug/
+**/*.rs.bk
+
+# Frontend & Dependencies
+web/.next/
+web/node_modules/
+**/node_modules/
+**/.turbo/
+**/.bun/
+
+# Containers & OS
+docker/
+.idea/
+.vscode/
+.DS_Store

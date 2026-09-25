@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { PaletteToggle } from "@/components/palette-toggle"
 import { MobileNav } from "@/components/mobile-nav"
+import { PulseDashboard } from "@/features/build-pulse/components/pulse-dashboard"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
   FlashIcon,
@@ -149,6 +150,9 @@ export default function LandingPage() {
           </div>
 
           <nav className="hidden lg:flex items-center gap-6 text-sm text-muted-foreground">
+            <a href="#buildpulse" className="text-cyan-400 font-semibold hover:text-cyan-300 transition-colors">
+              BuildPulse
+            </a>
             <a href="#subsystems" className="hover:text-foreground transition-colors">
               Subsystems
             </a>
@@ -275,6 +279,13 @@ export default function LandingPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* BuildPulse Autonomous Remediation Section */}
+      <section id="buildpulse" className="py-10 sm:py-16 border-b border-border/60 bg-gradient-to-b from-muted/20 via-background to-muted/10">
+        <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[2000px] px-3 sm:px-6">
+          <PulseDashboard />
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 pub mod ai;
 pub mod auth;
+pub mod build_pulse;
 pub mod cache;
 pub mod health;
 pub mod items;
@@ -23,4 +24,5 @@ pub fn configure_routes(state: AppState) -> Router {
         .merge(storage::router())
         .merge(rtc::router())
         .with_state(state)
+        .merge(build_pulse::router())
 }

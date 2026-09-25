@@ -16,10 +16,11 @@ A high-performance full-stack platform built for event-driven workflows, object 
 - **Authentication & Security**: Production-grade JWT access token issuance (15-min exp) and bcrypt hashing.
 - **AI Agent Integration**: Streaming and structured completion endpoints for autonomous tasks.
 - **Dedicated Servers Subsystem**: Decoupled HTTP/WebSocket server runners and background worker daemons.
-- **Configurable CORS Layer**: Configured via environment variable (`CORS_ALLOWED_ORIGINS`) with wildcard (`*` / `any`) and comma-separated origin parsing.
+- **BuildPulse Autonomic Repair Engine**: Closed-loop compiler diagnostic parser and sandboxed process runner.
+- **Model Context Protocol (MCP) Server**: JSON-RPC 2.0 endpoints (`/build-pulse/mcp`) exposing build failure context and verification runners directly to IBM Bob 2.0 in Agent Mode.
 - **Production Observability**: Leveled logging with `tracing-subscriber`, request ID propagation (`x-request-id`), timeouts, and compression.
 - **Global Error Handling**: Centralized `AppError` type converting subsystem failures into structured JSON responses without crashing or leaking secrets.
-- **Modular Vertical Slices**: Self-contained feature folders (`features/items/`, `features/storage/`, `features/rtc/`, `features/auth/`, `features/ai/`) scalable to 1,000+ files and 10,000 features.
+- **Modular Vertical Slices**: Self-contained feature folders (`features/build_pulse/`, `features/items/`, `features/storage/`, `features/rtc/`, `features/auth/`, `features/ai/`) scalable to 1,000+ files and 10,000 features.
 
 ### Frontend Dashboard (`web/`)
 - **Modern Interface**: Next.js 16 (App Router) with React 19 and Tailwind CSS v4.
@@ -56,6 +57,7 @@ A high-performance full-stack platform built for event-driven workflows, object 
 │       ├── infra/             # SQLx PostgreSQL, Redis, NATS, AWS S3 drivers
 │       ├── servers/           # HTTP server and background worker daemon runners
 │       ├── features/          # Self-contained feature slices (handlers, DTOs, routes)
+│       │   ├── build_pulse/   # MCP server, compiler AST diagnostics, subprocess runner
 │       │   ├── health/
 │       │   ├── auth/
 │       │   ├── ai/
@@ -72,6 +74,7 @@ A high-performance full-stack platform built for event-driven workflows, object 
     ├── package.json
     ├── app/                   # Next.js App Router (Landing page and /dashboard)
     ├── features/              # Feature modules (UI, hooks, actions)
+    │   ├── build-pulse/       # Mission control, terminal ANSI viewer, diff inspector
     │   ├── service-status/
     │   ├── auth/
     │   ├── ai-agent/
