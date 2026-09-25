@@ -160,7 +160,7 @@ A high-performance full-stack platform built for event-driven workflows, object 
 | :--- | :--- | :--- |
 | **API Server (Axum)** | `8080` | `http://localhost:8080` |
 | **Web Dashboard (Next.js)** | `3000` | `http://localhost:3000` |
-| **PostgreSQL Database** | `5432` | `postgres://postgres:postgres@localhost:5432/hackathon` |
+| **PostgreSQL Database** | `5432` | `postgres://postgres:postgres@localhost:5432/buildpulse` |
 | **Redis Server** | `6379` | `redis://localhost:6379` |
 | **NATS JetStream** | `4222` | `nats://localhost:4222` (Monitor: `http://localhost:8222`) |
 | **MinIO (S3 API)** | `9000` | `http://localhost:9000` |

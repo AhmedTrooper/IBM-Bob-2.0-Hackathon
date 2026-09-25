@@ -31,7 +31,7 @@ impl Config {
             .unwrap_or(8080);
 
         let database_url = env::var("DATABASE_URL").unwrap_or_else(|_| {
-            "postgres://postgres:postgres@127.0.0.1:5432/hackathon".to_string()
+            "postgres://postgres:postgres@127.0.0.1:5432/buildpulse".to_string()
         });
 
         let redis_url =
@@ -44,7 +44,7 @@ impl Config {
             .or_else(|| Some("http://127.0.0.1:9000".to_string()));
 
         let s3_region = env::var("S3_REGION").unwrap_or_else(|_| "us-east-1".to_string());
-        let s3_bucket = env::var("S3_BUCKET").unwrap_or_else(|_| "hackathon-bucket".to_string());
+        let s3_bucket = env::var("S3_BUCKET").unwrap_or_else(|_| "buildpulse-bucket".to_string());
         let s3_access_key = env::var("S3_ACCESS_KEY").unwrap_or_else(|_| "minioadmin".to_string());
         let s3_secret_key = env::var("S3_SECRET_KEY").unwrap_or_else(|_| "minioadmin".to_string());
         let s3_force_path_style = env::var("S3_FORCE_PATH_STYLE")

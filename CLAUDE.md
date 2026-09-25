@@ -173,7 +173,7 @@ Run commands using `make <target>`:
 | :--- | :--- | :--- |
 | **Rust API (Axum)** | `8080` | `http://localhost:8080` |
 | **Frontend (Next.js / Bun)** | `3000` | `http://localhost:3000` |
-| **PostgreSQL** | `5432` | `postgres://postgres:postgres@localhost:5432/hackathon` |
+| **PostgreSQL** | `5432` | `postgres://postgres:postgres@localhost:5432/buildpulse` |
 | **Redis & Streams** | `6379` | `redis://localhost:6379` |
 | **NATS (JetStream)** | `4222` | `nats://localhost:4222` (Monitor: `http://localhost:8222`) |
 | **MinIO (S3 API)** | `9000` | `http://localhost:9000` (Console: `http://localhost:9001`) |
